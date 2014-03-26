@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>alexkrolick | cookbook</title>
+        <meta name="description" content="" /> 
+        <meta name="keywords" content="cooking, kitchen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="/style.css" media="all" />
+
+        <!-- Tangle -->
+		<script type="text/javascript" src="/lib/Tangle/Tangle.js"></script>
+		<script type="text/javascript" src="/lib/Tangle/TangleKit/mootools.js"></script>
+		<script type="text/javascript" src="/lib/Tangle/TangleKit/sprintf.js"></script>
+		<script type="text/javascript" src="/lib/Tangle/TangleKit/BVTouchable.js"></script>
+		<script type="text/javascript" src="/lib/Tangle/TangleKit/TangleKit.js"></script>
+		<link   type="text/css" rel="stylesheet" href="/lib/Tangle/TangleKit/TangleKit.css">
+
+		<!-- Tangle Variables -->
+		<script type="text/javascript">
+			function setUpTangle () {
+				var tangle = new Tangle (document.getElementById("ingredients"), {
+			 	   initialize: function () {},
+			    	update: function () {}
+				});
+			}
+		</script>
+		
+    </head>
+
+    <body onload="setUpTangle();">
+	    <h1>Chocolate Chip Cookies</h1>
+			<h2>Ingredients</h2>
+				<div id="ingredients">
+					1 cup butter, softened<br />
+ 					1 cup white sugar<br />
+					1 cup packed brown sugar<br />
+					2 eggs<br />
+					2 teaspoons vanilla extract<br />
+					3 cups all-purpose flour<br />
+					1 teaspoon baking soda<br />
+					2 teaspoons hot water<br />
+					1/2 teaspoon salt<br />
+					2 cups semisweet chocolate chips<br />
+					1 cup chopped walnuts<br />
+				</div>
+			<h2>Directions</h2>
+				<div id="instructions">
+					<p>Preheat oven to 350 degrees F (175 degrees C).</p>
+					<p>Cream together the butter, white sugar, and brown sugar until smooth.
+					<br />Beat in the eggs one at a time, then stir in the vanilla.
+					<br />Dissolve baking soda in hot water. Add to batter along with salt.
+					<br />Stir in flour, chocolate chips, and nuts.
+					<br />Drop by large spoonfuls onto ungreased pans.
+					</p>
+					<p>Bake for about 10 minutes in the preheated oven, or until edges are nicely browned.</p>
+				</div>
+    </body>
+</html>

@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>alexkrolick | cookbook</title>
-        <meta name="description" content="" /> 
-        <meta name="keywords" content="cooking, kitchen" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	  <title>alexkrolick | cookbook</title>
+    <meta name="description" content="" /> 
+    <meta name="keywords" content="cooking, kitchen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-        <!-- Style -->
-        <link rel="stylesheet" type="text/css" href="/style.css" media="all" />
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="/style.css" media="all" />
 
-        <!-- Tangle -->
+    <!-- Tangle -->
 		<script type="text/javascript" src="/lib/Tangle/Tangle.js"></script>
 		<script type="text/javascript" src="/lib/Tangle/TangleKit/mootools.js"></script>
 		<script type="text/javascript" src="/lib/Tangle/TangleKit/sprintf.js"></script>
@@ -19,31 +19,70 @@
 
 		<!-- Tangle Variables -->
 		<script type="text/javascript">
-			function setUpTangle () {
-				var tangle = new Tangle (document.getElementById("ingredients"), {
-			 	   initialize: function () {},
-			    	update: function () {}
-				});
-			}
+      function setUpTangle () {
+        // TODO: do this in a scaleable way (using arrays or something)
+        var t_element = document.getElementById("recipe");
+
+        var tangle = new Tangle(t_element, {
+          initialize: function () {
+            this.qty = 1;
+            this.a = 1;
+            this.b = 1;
+            this.c = 1;
+            this.d = 2;
+            this.e = 2;
+            this.f = 3;
+            this.g = 1;
+            this.h = 2;
+            this.i = 0.5;
+            this.j = 2;
+            this.k = 1;
+          },
+          update: function () {
+            this.a = 1*this.qty;
+            this.b = 1*this.qty;
+            this.c = 1*this.qty;
+            this.d = 2*this.qty;
+            this.e = 2*this.qty;
+            this.f = 3*this.qty;
+            this.g = 1*this.qty;
+            this.h = 2*this.qty;
+            this.i = 0.5*this.qty;
+            this.j = 2*this.qty;
+            this.k = 1*this.qty;
+          }
+        });
+      }
 		</script>
 		
     </head>
 
     <body onload="setUpTangle();">
+    <div id="recipe">
 	    <h1>Chocolate Chip Cookies</h1>
+      <span data-var="qty" data-step=1
+              data-min=1     data-max=4
+              class="TKAdjustableNumber"
+              id="qty"> dozen
+        </span> 
+	    	<div id="description">
+	    		<p>
+          Thundercats chillwave Neutra VHS elit, magna PBRB excepteur street art Williamsburg hoodie irure squid. Pickled wolf High Life, vegan readymade gentrify sed bitters fingerstache artisan occaecat eiusmod Pitchfork nesciunt. 
+          </p>
+	    	</div>
 			<h2>Ingredients</h2>
 				<div id="ingredients">
-					1 cup butter, softened<br />
- 					1 cup white sugar<br />
-					1 cup packed brown sugar<br />
-					2 eggs<br />
-					2 teaspoons vanilla extract<br />
-					3 cups all-purpose flour<br />
-					1 teaspoon baking soda<br />
-					2 teaspoons hot water<br />
-					1/2 teaspoon salt<br />
-					2 cups semisweet chocolate chips<br />
-					1 cup chopped walnuts<br />
+					<span data-var="a"></span> cup butter, softened<br />
+ 					<span data-var="b"></span> cup white sugar<br />
+					<span data-var="c"></span> cup packed brown sugar<br />
+					<span data-var="d"></span> eggs<br />
+					<span data-var="e"></span> tsps vanilla extract<br />
+					<span data-var="f"></span> cups all-purpose flour<br />
+					<span data-var="g"></span> tsps baking soda<br />
+					<span data-var="h"></span> tsps hot water<br />
+					<span data-var="i"></span> tsps salt<br />
+					<span data-var="j"></span> cups semisweet chocolate chips<br />
+					<span data-var="k"></span> cup chopped walnuts<br />
 				</div>
 			<h2>Directions</h2>
 				<div id="instructions">
@@ -58,3 +97,4 @@
 				</div>
     </body>
 </html>
+

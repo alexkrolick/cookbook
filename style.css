@@ -33,6 +33,14 @@ body {
 	display: block;
 }
 
+#instructions p:hover .step{
+	display: inline;
+}
+
+#instructions p .step{
+	display: none;
+}
+
 #description {
 	font-style: italic;
 	font-size: 100%;

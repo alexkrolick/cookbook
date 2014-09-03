@@ -13,3 +13,7 @@ I'm not hosting this anywhere right now, but you can test it out by firing up a 
 
 ### python2
 `python -m SimpleHTTPServer`
+
+Recipes
+------
+The recipe in the demo is the [Toll House Chocolate Cookie Recipe](http://www.verybestbaking.com/recipes/18476/Original-NESTLE-TOLL-HOUSE-Chocolate-Chip-Cookies/detail.aspx)

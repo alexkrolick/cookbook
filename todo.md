@@ -1,8 +1,8 @@
 # TODO
-[ ] Scale quantities
+[x] Scale quantities
 [ ] Built-in timers
 [ ] Cross out used ingredients
-[ ] Highlight ingredients in each step
+[ ] Highlight required ingredients in list when a step is selected
 [ ] Mouse key moves through steps
 [ ] More responsive layout
 [ ] Navigation to other recipes
